@@ -1,0 +1,148 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+p {
+    font-size: 14px;
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemcard {
+    overflow: hidden;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid;
+    border-width: 0;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    content: url("images/image-product-desktop.jpg");
+ }
+
+.info {
+    background-color: hsl(0, 0%, 100%);
+    padding: 35px;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.itemtopic{
+    letter-spacing: 0.4rem;
+    font-size: 12px;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 95%;
+    color: hsl(212, 21%, 14%);
+    margin: 25px 0px;
+}
+
+.discription {
+    line-height: 1.4rem;
+    margin: 0;
+}
+
+.price {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+    margin: 25px 0px;
+    
+}
+
+.preprice{
+    font-size: 40%;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    border: solid;
+    border-width: 0;
+    border-radius: 7px;
+    font-size: 1rem;
+    padding: auto;
+    width: 100%;
+    height: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(158, 36%, 41%);
+
+}
+
+button:active {
+    background-color: hsl(158, 37%, 23%);
+}
+
+svg {
+    margin-right: 0.3rem;
+    vertical-align: middle;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+}
+
+.buttonText {
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/*Mobile*/
+
+@media only screen and (max-width: 650px) {
+    img {
+        height: 100%;
+        content: url("images/image-product-mobile.jpg");
+        object-fit: cover;
+    }
+    .itemcard {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1.5fr;
+
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin: 15px 0px;
+    }
+    .price {
+        margin: 20px 0px;
+    }
+    .info {
+        padding: 20px;
+    }
+    button {
+        height: 50px;
+    }
+  }
+
+  @media screen and (max-width: 649px) and (min-width: 400px) {
+    .itemcard {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 0.8fr;
+    }
+  }
